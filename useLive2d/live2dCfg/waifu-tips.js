@@ -104,7 +104,8 @@ $.ajax({
 window.setInterval(showHitokoto, 30000);
 
 function showHitokoto() {
-    $.getJSON('https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=28&encode=json', function (result) {
+    // 接口详情地址：https://developer.hitokoto.cn/sentence/
+    $.getJSON('https://v1.hitokoto.cn/?c=i&charset=utf-8&max_length=30&encode=json', function (result) {
         showMessage(result.hitokoto, 5000);
     });
 }
